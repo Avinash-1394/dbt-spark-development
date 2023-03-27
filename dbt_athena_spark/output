@@ -1,0 +1,295 @@
+
+
+============================== 2023-03-27 12:56:59.328148 | 1a77a002-36eb-4fd9-bf53-4f7a64d07e81 ==============================
+[0m12:56:59.328148 [info ] [MainThread]: Running with dbt=1.4.4
+[0m12:56:59.333364 [debug] [MainThread]: running dbt with arguments {'debug': True, 'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/avinash1394/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m12:56:59.334623 [debug] [MainThread]: Tracking: tracking
+[0m12:56:59.338547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e86b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e86c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e84190>]}
+[0m12:56:59.366498 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m12:56:59.430147 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:56:59.431366 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:56:59.446039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e440d0>]}
+[0m12:56:59.460100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e180d0>]}
+[0m12:56:59.461662 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m12:56:59.462762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e18040>]}
+[0m12:56:59.466209 [info ] [MainThread]: 
+[0m12:56:59.470814 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m12:56:59.474320 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m12:56:59.476235 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:00.068245 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m12:57:00.074254 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog_analytics_dev'
+[0m12:57:00.076562 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:57:00.901427 [debug] [ThreadPool]: On list_awsdatacatalog_analytics_dev: Close
+[0m12:57:00.910533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8ecb760>]}
+[0m12:57:00.914191 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:57:00.915925 [info ] [MainThread]: 
+[0m12:57:00.931230 [debug] [Thread-1 (]: Began running node model.dbt_athena_spark.model
+[0m12:57:00.933284 [debug] [Thread-2 (]: Began running node model.dbt_athena_spark.my_first_dbt_model
+[0m12:57:00.934981 [info ] [Thread-1 (]: 1 of 3 START sql table model analytics_dev.model ............................... [RUN]
+[0m12:57:00.936779 [info ] [Thread-2 (]: 2 of 3 START python table model analytics_dev.my_first_dbt_model ............... [RUN]
+[0m12:57:00.939064 [debug] [Thread-1 (]: Acquiring new athena connection 'model.dbt_athena_spark.model'
+[0m12:57:00.941200 [debug] [Thread-2 (]: Acquiring new athena connection 'model.dbt_athena_spark.my_first_dbt_model'
+[0m12:57:00.942928 [debug] [Thread-1 (]: Began compiling node model.dbt_athena_spark.model
+[0m12:57:00.944476 [debug] [Thread-2 (]: Began compiling node model.dbt_athena_spark.my_first_dbt_model
+[0m12:57:00.952712 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_athena_spark.model"
+[0m12:57:01.002934 [debug] [Thread-1 (]: Timing info for model.dbt_athena_spark.model (compile): 2023-03-27 12:57:00.945764 => 2023-03-27 12:57:01.002695
+[0m12:57:01.006545 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_athena_spark.my_first_dbt_model"
+[0m12:57:01.008134 [debug] [Thread-1 (]: Began executing node model.dbt_athena_spark.model
+[0m12:57:01.020570 [debug] [Thread-2 (]: Timing info for model.dbt_athena_spark.my_first_dbt_model (compile): 2023-03-27 12:57:00.953575 => 2023-03-27 12:57:01.020252
+[0m12:57:01.027143 [debug] [Thread-2 (]: Began executing node model.dbt_athena_spark.my_first_dbt_model
+[0m12:57:01.087415 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:57:01.092689 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:57:01.949636 [debug] [Thread-1 (]: Athena adapter: table_name : model
+[0m12:57:01.950971 [debug] [Thread-1 (]: Athena adapter: table type : table
+[0m12:57:02.008327 [debug] [Thread-2 (]: Athena adapter: table_name : my_first_dbt_model
+[0m12:57:02.009689 [debug] [Thread-2 (]: Athena adapter: table type : table
+[0m12:57:02.421903 [debug] [Thread-1 (]: Athena adapter: analytics_dev.model is stored in s3://dbt-athena/analytics_dev/model/ba49c03c-6a37-4936-b153-15b30aaff445/
+[0m12:57:02.472528 [debug] [Thread-2 (]: Athena adapter: analytics_dev.my_first_dbt_model is stored in s3://dbt-athena/my_first_dbt_model
+[0m12:57:03.226094 [debug] [Thread-1 (]: Athena adapter: Deleting table data: path='s3://dbt-athena/analytics_dev/model/ba49c03c-6a37-4936-b153-15b30aaff445/', bucket='dbt-athena', prefix='analytics_dev/model/ba49c03c-6a37-4936-b153-15b30aaff445/'
+[0m12:57:03.275661 [debug] [Thread-2 (]: Athena adapter: S3 path does not exist
+[0m12:57:03.333484 [debug] [Thread-2 (]: Using athena connection "model.dbt_athena_spark.my_first_dbt_model"
+[0m12:57:03.335310 [debug] [Thread-2 (]: On model.dbt_athena_spark.my_first_dbt_model: drop table if exists `analytics_dev`.`my_first_dbt_model`
+[0m12:57:03.807531 [debug] [Thread-1 (]: Using athena connection "model.dbt_athena_spark.model"
+[0m12:57:03.808653 [debug] [Thread-1 (]: On model.dbt_athena_spark.model: drop table if exists `analytics_dev`.`model`
+[0m12:57:05.234941 [debug] [Thread-2 (]: SQL status: OK -1 in 2 seconds
+[0m12:57:05.410472 [debug] [Thread-2 (]: Writing runtime python for node "model.dbt_athena_spark.my_first_dbt_model"
+[0m12:57:05.419695 [debug] [Thread-2 (]: On model.dbt_athena_spark.my_first_dbt_model: 
+  
+    import pandas as pd
+
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    model_df = pd.DataFrame({"A": [1, 2, 3, 4]})
+
+    return model_df
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args,dbt_load_df_function):
+    refs = {}
+    key = ".".join(args)
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = ".".join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = 'awsdatacatalog'
+    schema = 'analytics_dev'
+    identifier = 'my_first_dbt_model'
+    def __repr__(self):
+        return 'analytics_dev.my_first_dbt_model'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args: ref(*args, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(spark_session, df, target_relation):
+    import pandas
+    try:
+        if isinstance(df, pandas.core.frame.DataFrame):
+            df = spark_session.createDataFrame(df)
+        df.write.saveAsTable(
+            name="analytics_dev.my_first_dbt_model",
+            format="parquet",
+            mode="overwrite",
+        )
+        return "OK"
+    except Exception:
+        raise
+
+dbt = dbtObj(spark.table)
+df = model(dbt, spark)
+materialize(spark, df, dbt.this)
+  
+[0m12:57:05.695628 [debug] [Thread-1 (]: SQL status: OK -1 in 2 seconds
+[0m12:57:06.407379 [debug] [Thread-1 (]: Athena adapter: S3 path does not exist
+[0m12:57:06.409109 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_athena_spark.model"
+[0m12:57:06.410810 [debug] [Thread-1 (]: Using athena connection "model.dbt_athena_spark.model"
+[0m12:57:06.412059 [debug] [Thread-1 (]: On model.dbt_athena_spark.model: -- /* {"app": "dbt", "dbt_version": "1.4.4", "profile_name": "analytics_spark", "target_name": "dev", "node_id": "model.dbt_athena_spark.model"} */
+
+  
+    
+
+    
+
+    create table "analytics_dev"."model"
+    with (
+      table_type='hive',
+      is_external=true,
+      external_location='s3://dbt-athena/analytics_dev/model/4f8f6976-7ceb-425a-b1c1-db588921e649',
+      format='parquet'
+    )
+    as
+      
+select 1 as column_1, 2 as column_2, '2023-03-27' as run_date
+  
+[0m12:57:07.958934 [debug] [Thread-1 (]: SQL status: OK -1 in 2 seconds
+[0m12:57:07.979645 [debug] [Thread-1 (]: Using athena connection "model.dbt_athena_spark.model"
+[0m12:57:07.982154 [debug] [Thread-1 (]: On model.dbt_athena_spark.model: alter table `analytics_dev`.`model` set tblproperties ('classification' = 'parquet')
+[0m12:57:09.086861 [debug] [Thread-2 (]: Athena adapter: Submitted calculation execution id a6c39192-6bc4-4f39-456d-8eaf7040527d
+[0m12:57:09.445721 [debug] [Thread-1 (]: SQL status: OK -1 in 1 seconds
+[0m12:57:09.467059 [debug] [Thread-1 (]: Timing info for model.dbt_athena_spark.model (execute): 2023-03-27 12:57:01.009656 => 2023-03-27 12:57:09.466811
+[0m12:57:09.468638 [debug] [Thread-1 (]: On model.dbt_athena_spark.model: Close
+[0m12:57:09.470834 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b8e85660>]}
+[0m12:57:09.472330 [info ] [Thread-1 (]: 1 of 3 OK created sql table model analytics_dev.model .......................... [[32mOK -1[0m in 8.53s]
+[0m12:57:09.477645 [debug] [Thread-1 (]: Finished running node model.dbt_athena_spark.model
+[0m12:57:09.480728 [debug] [Thread-4 (]: Began running node model.dbt_athena_spark.my_incremental_dbt_model
+[0m12:57:09.483268 [info ] [Thread-4 (]: 3 of 3 START python incremental model analytics_dev.my_incremental_dbt_model ... [RUN]
+[0m12:57:09.485958 [debug] [Thread-4 (]: Acquiring new athena connection 'model.dbt_athena_spark.my_incremental_dbt_model'
+[0m12:57:09.487185 [debug] [Thread-4 (]: Began compiling node model.dbt_athena_spark.my_incremental_dbt_model
+[0m12:57:09.497763 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_athena_spark.my_incremental_dbt_model"
+[0m12:57:09.499706 [debug] [Thread-4 (]: Timing info for model.dbt_athena_spark.my_incremental_dbt_model (compile): 2023-03-27 12:57:09.488322 => 2023-03-27 12:57:09.499503
+[0m12:57:09.501024 [debug] [Thread-4 (]: Began executing node model.dbt_athena_spark.my_incremental_dbt_model
+[0m12:57:09.618419 [debug] [Thread-4 (]: Writing runtime python for node "model.dbt_athena_spark.my_incremental_dbt_model"
+[0m12:57:09.620369 [debug] [Thread-4 (]: On model.dbt_athena_spark.my_incremental_dbt_model: 
+    
+  
+    import pandas as pd
+
+
+def model(dbt, session):
+    dbt.config(materialized="incremental")
+    df = dbt.ref("model")
+
+    if dbt.is_incremental:
+        max_from_this = f"select max(run_date) from {dbt.this}"
+        df = df.filter(df.run_date >= session.sql(max_from_this).collect()[0][0])
+
+    return df
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args,dbt_load_df_function):
+    refs = {"model": "analytics_dev.model"}
+    key = ".".join(args)
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = ".".join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = 'awsdatacatalog'
+    schema = 'analytics_dev'
+    identifier = 'my_incremental_dbt_model'
+    def __repr__(self):
+        return 'analytics_dev.my_incremental_dbt_model'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args: ref(*args, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(spark_session, df, target_relation):
+    import pandas
+    try:
+        if isinstance(df, pandas.core.frame.DataFrame):
+            df = spark_session.createDataFrame(df)
+        df.write.saveAsTable(
+            name="analytics_dev.my_incremental_dbt_model",
+            format="parquet",
+            mode="overwrite",
+        )
+        return "OK"
+    except Exception:
+        raise
+
+dbt = dbtObj(spark.table)
+df = model(dbt, spark)
+materialize(spark, df, dbt.this)
+  
+  
+[0m12:57:12.984951 [debug] [Thread-4 (]: Athena adapter: Submitted calculation execution id 78c39192-737a-fbdb-6f62-e90761589394
+[0m12:57:40.339300 [debug] [Thread-2 (]: Athena adapter: Received execution status COMPLETED
+[0m12:57:40.414911 [debug] [Thread-2 (]: Athena adapter: Terminating session: 44c39192-6664-a005-0ef9-fc853feaada4
+[0m12:57:42.983450 [debug] [Thread-2 (]: Execution status: OK in 37.56 seconds
+[0m12:57:43.006038 [debug] [Thread-2 (]: Timing info for model.dbt_athena_spark.my_first_dbt_model (execute): 2023-03-27 12:57:01.035896 => 2023-03-27 12:57:43.005920
+[0m12:57:43.007444 [debug] [Thread-2 (]: On model.dbt_athena_spark.my_first_dbt_model: Close
+[0m12:57:43.010078 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b3cdcf10>]}
+[0m12:57:43.011609 [info ] [Thread-2 (]: 2 of 3 OK created python table model analytics_dev.my_first_dbt_model .......... [[32mOK[0m in 42.07s]
+[0m12:57:43.012928 [debug] [Thread-2 (]: Finished running node model.dbt_athena_spark.my_first_dbt_model
+[0m12:57:44.329991 [debug] [Thread-4 (]: Athena adapter: Received execution status COMPLETED
+[0m12:57:44.457693 [debug] [Thread-4 (]: Athena adapter: Terminating session: 44c39192-6e49-3541-7088-96b7accff2c8
+[0m12:57:46.362670 [debug] [Thread-4 (]: Execution status: OK in 36.74 seconds
+[0m12:57:46.366257 [debug] [Thread-4 (]: Using athena connection "model.dbt_athena_spark.my_incremental_dbt_model"
+[0m12:57:46.367350 [debug] [Thread-4 (]: On model.dbt_athena_spark.my_incremental_dbt_model: alter table `analytics_dev`.`my_incremental_dbt_model` set tblproperties ('classification' = 'parquet')
+[0m12:57:46.368510 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m12:57:48.321369 [debug] [Thread-4 (]: SQL status: OK -1 in 2 seconds
+[0m12:57:48.326954 [debug] [Thread-4 (]: Timing info for model.dbt_athena_spark.my_incremental_dbt_model (execute): 2023-03-27 12:57:09.502210 => 2023-03-27 12:57:48.326844
+[0m12:57:48.328190 [debug] [Thread-4 (]: On model.dbt_athena_spark.my_incremental_dbt_model: Close
+[0m12:57:48.330243 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1a77a002-36eb-4fd9-bf53-4f7a64d07e81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff89b66bdf0>]}
+[0m12:57:48.331748 [info ] [Thread-4 (]: 3 of 3 OK created python incremental model analytics_dev.my_incremental_dbt_model  [[32mOK[0m in 38.85s]
+[0m12:57:48.332927 [debug] [Thread-4 (]: Finished running node model.dbt_athena_spark.my_incremental_dbt_model
+[0m12:57:48.337637 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m12:57:48.339717 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:57:48.340763 [debug] [MainThread]: Connection 'model.dbt_athena_spark.model' was properly closed.
+[0m12:57:48.341843 [debug] [MainThread]: Connection 'model.dbt_athena_spark.my_first_dbt_model' was properly closed.
+[0m12:57:48.342909 [debug] [MainThread]: Connection 'model.dbt_athena_spark.my_incremental_dbt_model' was properly closed.
+[0m12:57:48.346014 [info ] [MainThread]: 
+[0m12:57:48.347125 [info ] [MainThread]: Finished running 2 table models, 1 incremental model in 0 hours 0 minutes and 48.88 seconds (48.88s).
+[0m12:57:48.348661 [debug] [MainThread]: Command end result
+[0m12:57:48.367436 [info ] [MainThread]: 
+[0m12:57:48.368951 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:57:48.370034 [info ] [MainThread]: 
+[0m12:57:48.370999 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m12:57:48.372264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b9fba740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b37f63b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8b37f5990>]}
+[0m12:57:48.373385 [debug] [MainThread]: Flushing usage events
