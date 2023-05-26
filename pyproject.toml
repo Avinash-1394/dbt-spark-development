@@ -9,7 +9,7 @@ packages = [{include = "dbt_spark_development"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 dbt-core = "^1.4.4"
-dbt-athena-community = { path = "../dbt-athena-community-2/dbt-athena"}
+dbt-athena-community = { path = "../dbt-athena-1"}
 ipython = "^8.11.0"
 
 [tool.poetry.group.dev.dependencies]

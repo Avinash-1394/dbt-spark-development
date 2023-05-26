@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+	- name: model
+		description: Creates a table with 1, 2 and run_date
+	- name: pandas_model
+	- name: spark_model
+	- name: spark_incremental
+	- name: change_engine_config
+	- name: change_polling_interval
+	- name: change_timeout_config
