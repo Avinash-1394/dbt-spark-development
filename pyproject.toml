@@ -4,11 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Avinash-1394 <43074786+Avinash-1394@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "dbt_spark_development"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-dbt-core = "^1.4.4"
+dbt-core = "^1.7.0"
 dbt-athena-community = { path = "../dbt-athena-1"}
 ipython = "^8.11.0"
 

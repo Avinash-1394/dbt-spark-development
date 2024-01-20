@@ -1,0 +1,31 @@
+config:
+  send_anonymous_usage_stats: true
+  use_colors: true
+  partial_parse: true
+  write_json: true
+  warn_error: true
+  log_format: default
+  debug: true
+  fail_fast: true
+  use_experimental_parser: true
+
+analytics_spark:
+  target: dev
+  outputs:
+    dev:
+      type: athena
+      s3_staging_dir: s3://athena-query-results/dbt/
+      s3_data_dir: s3://your_s3_bucket/dbt/
+      s3_data_naming: schema_table
+      s3_tmp_table_dir: s3://your_s3_bucket/temp/
+      region_name: us-east-1
+      schema: analytics_spark
+      database: awsdatacatalog
+      aws_access_key_id: {{ env_var('AWS_ACCESS_KEY_ID') }}
+      aws_secret_access_key: {{ env_var('AWS_SECRET_ACCESS_KEY') }}
+      work_group: my-workgroup
+      seed_s3_upload_args:
+        ACL: bucket-owner-full-control
+
+<profile-name>: # additional profiles
+  ...

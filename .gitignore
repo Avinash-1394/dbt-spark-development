@@ -1,8 +1,4 @@
-.venv
-logs
 
-dbt_athena_spark/logs
-dbt_athena_spark/target
-dbt_athena_spark/dbt_packages
-
-*.gitkeep
+target/
+dbt_packages/
+logs/
